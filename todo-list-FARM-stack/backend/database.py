@@ -11,7 +11,7 @@ collection = database.todo
 # main functions for db
 # should be one matching function with each function in main.py
 async def fetch_one_todo(title):
-    document = collection.find_one({"title": title})
+    document = await collection.find_one({"title": title})
     return document
 
 async def fetch_all_todos():
@@ -24,7 +24,7 @@ async def fetch_all_todos():
 async def create_todo(todo):
     document = todo
     result = await collection.insert_one(document)
-    return result
+    return document
 
 async def update_todo(title, desc): # name of vars in todo class
     # look up by title and change description

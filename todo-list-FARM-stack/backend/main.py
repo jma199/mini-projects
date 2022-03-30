@@ -21,12 +21,12 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins = origins,
     allow_credentials = True,
-    allow_methods = ['*'],
+    allow_methods = ["*"],
     allow_headers = ["*"]
-    )
+)
 
 @app.get("/")
-def read_root():
+async def read_root():
     return {"Hello": "World"}
 
 # why todo? this var comes from the database.py file
