@@ -1,7 +1,7 @@
 import TodoItem from './Todo';
 import React from 'react';
 
-function TodoView(props) {
+export default function TodoView(props) {
     return (
         <div>
             <ul>
@@ -10,5 +10,3 @@ function TodoView(props) {
         </div>
     )
 }
-
-export default TodoView
